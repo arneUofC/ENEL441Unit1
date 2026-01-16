@@ -112,7 +112,7 @@ def enel441_peak_overshoot(t, out_step, ax):
 def enel441_settling_time(t, out_step, ax):
     final_value = out_step[-1]
     
-    ii = t.shape[0] - 1
+    ii = out_step.shape[0] - 1
     while out_step[ii] < 1.02*final_value and out_step[ii] > 0.98*final_value:
         ii -= 1
     
